@@ -1,0 +1,26 @@
+{
+  "name": "KIF Sponsoring Website",
+  "version": "0.1.0",
+  "authors": [
+    "Johannes Lauinger <johannes@lauinger-it.de>"
+  ],
+  "description": "simple statische Webseite für Sponsoringinformationen bzgl. der KIF 44.0",
+  "main": "index.html",
+  "keywords": [
+    "KIF",
+    "awesome",
+    "websites",
+    "sponsoring"
+  ],
+  "license": "GPLv3",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.2"
+  }
+}
