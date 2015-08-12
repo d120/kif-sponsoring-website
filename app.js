@@ -5,22 +5,21 @@
   $(function(){
     $('.fade-left').css({
       left: '-100px',
+      opacity: 0
     });
     $('.fade-right').css({
       left: '+100px',
+      opacity: 0
     });
 
-    $('.fade-left, .fade-right').css({
-      opacity: 0
-    }).each(function(i, elem){
-      new Waypoint.Inview({
-        element: elem,
-        entered: function(direction) {
-          $(elem).animate({
-            left: 0,
-            opacity: 1
-          }, 400);
-        }
+    $('.waypoint-anchor').each(function(i, elem){
+      $(elem).waypoint(function(){
+        $(elem).find('.fade-left, .fade-right').animate({
+          left: 0,
+          opacity: 1
+        }, 300);
+      }, {
+        offset: '60%'
       });
     });
   });
@@ -29,7 +28,7 @@
     console.log('a[name=' + $.attr(this, 'href') + ']');
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 500);
+    }, 300);
     return false;
   });
 
