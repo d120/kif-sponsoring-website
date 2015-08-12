@@ -11,6 +11,7 @@
 .bg-gray { background-color: @gray }
 
 .white, .white h1, .white h2, .white h3, .white h4 { color: #fff; }
+.yellow, .yellow h1, .yellow h2, .yellow h3, .yellow h4 { color: @yellow; }
 
 .right { text-align: right; }
 .center { text-align: center; }
@@ -27,6 +28,8 @@
   .small-center { text-align: center; }
   .small-inline-important { display: inline !important; }
 }
+
+.max-w-5 { max-width: 5rem; }
 
 address {
   font-style: normal;
@@ -110,15 +113,56 @@ body {
   }
   .box:hover {
     background-color: #d6d6d6;
+    text-decoration: none;
   }
 }
 
-footer {
+.bg-gray {
   a, a:active, a:focus {
     color: @yellow;
   }
   a:hover, a:active:hover, a:active:focus {
     color: @yellow;
-    text-decoration: underline;
+  }
+}
+.bg-white {
+  a, a:active, a:focus {
+    color: @blue;
+  }
+  a:hover, a:active:hover, a:active:focus {
+    color: @blue;
+  }
+}
+
+a:hover { text-decoration: underline; }
+
+.factbox {
+  border: 1px solid @yellow;
+  border-radius: 0.3rem;
+  padding: 1rem;
+
+  dd {
+    font-style: italic;
+  }
+}
+
+.pricing-table {
+  min-height: 18rem;
+  background-color: @gray;
+  border-color: @yellow;
+
+  .title {
+    background-color: @yellow;
+    color: @gray;
+  }
+  .price {
+    background-color: @gray;
+    color: @yellow;
+  }
+  .bullet-item {
+    background-color: @gray;
+    color: @white;
+    border: none;
+    line-height: 1.8;
   }
 }

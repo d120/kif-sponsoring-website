@@ -25,4 +25,12 @@
     });
   });
 
+  $('a').click(function(){
+    console.log('a[name=' + $.attr(this, 'href') + ']');
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+    return false;
+  });
+
 })( window, document, jQuery );
