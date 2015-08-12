@@ -14,9 +14,7 @@
 
 .right { text-align: right; }
 .center { text-align: center; }
-.vcenter-wrap {
-  display: table;
-}
+.vcenter-wrap { display: table; }
 .vcenter {
   display: table-cell;
   vertical-align: center;
@@ -25,8 +23,17 @@
 .padding-top-1 { padding-top: 1rem; }
 .padding-top-3 { padding-top: 3rem; }
 
+@media screen and (max-width: 40rem) {
+  .small-center { text-align: center; }
+  .small-inline-important { display: inline !important; }
+}
+
 address {
   font-style: normal;
+}
+
+body {
+  max-width: 100%;
 }
 
 .section {
@@ -53,7 +60,7 @@ address {
   padding-top: 3rem;
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
   }
   h3 {
@@ -101,10 +108,10 @@ address {
 }
 
 footer {
-  a {
+  a, a:active, a:focus {
     color: @yellow;
   }
-  a:hover {
+  a:hover, a:active:hover, a:active:focus {
     color: @yellow;
     text-decoration: underline;
   }
