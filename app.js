@@ -5,14 +5,14 @@
   $(function(){
     $('.fade-left').css({
       left: '-100px',
-      opacity: 0
     });
     $('.fade-right').css({
       left: '+100px',
-      opacity: 0
-    })
+    });
 
-    $('.fade-left, .fade-right').each(function(i, elem){
+    $('.fade-left, .fade-right').css({
+      opacity: 0
+    }).each(function(i, elem){
       new Waypoint.Inview({
         element: elem,
         entered: function(direction) {
