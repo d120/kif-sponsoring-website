@@ -147,7 +147,6 @@ a:hover { text-decoration: underline; }
 }
 
 .pricing-table {
-  min-height: 18rem;
   background-color: @gray;
   border-color: @yellow;
 
@@ -161,8 +160,9 @@ a:hover { text-decoration: underline; }
   }
   .bullet-item {
     background-color: @gray;
-    color: @white;
+    color: lighten(@white, 10%);
     border: none;
     line-height: 1.8;
+    min-height: 10rem;
   }
 }

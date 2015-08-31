@@ -170,7 +170,6 @@ a:hover {
   font-style: italic;
 }
 .pricing-table {
-  min-height: 18rem;
   background-color: #34495e;
   border-color: #f1c40f;
 }
@@ -184,7 +183,8 @@ a:hover {
 }
 .pricing-table .bullet-item {
   background-color: #34495e;
-  color: #dadada;
+  color: #f3f3f3;
   border: none;
   line-height: 1.8;
+  min-height: 10rem;
 }
